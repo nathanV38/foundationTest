@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <html class="ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+  <head>
+  	<meta charset="utf-8" />
+
+  	<!-- Uncomment to make IE8 render like IE7 -->
+  	<!-- <meta http-equiv="X-UA-Compatible" content="IE=7" /> -->
+
+  	<!-- Set the viewport width to device width for mobile -->
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  	<title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+
+  	<%= stylesheet_link_tag    "application" %>
+  	<%= javascript_include_tag "vendor/custom.modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+	
+	
+
+<nav class="top-bar" data-options="is_hover:false">
+  <ul class="title-area">
+    <!-- Title Area -->
+    <li class="name">
+      <h1><a href="#">Top Bar Title </a></h1>
+    </li>
+    <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <!-- Left Nav Section -->
+    <ul class="left">
+      <li class="divider"></li>
+      <li class="active"><a href="#">Main Item 1</a></li>
+      <li class="divider"></li>
+      <li><a href="#">Main Item 2</a></li>
+      <li class="divider"></li>
+      <li class="has-dropdown"><a href="#">Main Item 3</a>
+
+        <ul class="dropdown">
+          <li class="has-dropdown"><a href="#">Dropdown Level 1a</a>
+
+            <ul class="dropdown">
+              <li><label>Dropdown Level 2 Label</label></li>
+              <li><a href="#">Dropdown Level 2a</a></li>
+              <li><a href="#">Dropdown Level 2b</a></li>
+              <li class="has-dropdown"><a href="#">Dropdown Level 2c</a>
+
+                <ul class="dropdown">
+                  <li><label>Dropdown Level 3 Label</label></li>
+                  <li><a href="#">Dropdown Level 3a</a></li>
+                  <li><a href="#">Dropdown Level 3b</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Dropdown Level 3c</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Dropdown Level 2d</a></li>
+              <li><a href="#">Dropdown Level 2e</a></li>
+              <li><a href="#">Dropdown Level 2f</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Dropdown Level 1b</a></li>
+          <li><a href="#">Dropdown Level 1c</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Dropdown Level 1d</a></li>
+          <li><a href="#">Dropdown Level 1e</a></li>
+          <li><a href="#">Dropdown Level 1f</a></li>
+          <li class="divider"></li>
+          <li><a href="#">See all &rarr;</a></li>
+        </ul>
+      </li>
+      <li class="divider"></li>
+    </ul>
+
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <li class="divider hide-for-small"></li>
+      <li class="has-dropdown"><a href="#">Main Item 4</a>
+
+        <ul class="dropdown">
+          <li><label>Dropdown Level 1 Label</label></li>
+          <li class="has-dropdown"><a href="#" class="">Dropdown Level 1a</a>
+
+            <ul class="dropdown">
+              <li><a href="#">Dropdown Level 2a</a></li>
+              <li><a href="#">Dropdown Level 2b</a></li>
+              <li class="has-dropdown"><a href="#">Dropdown Level 2c</a>
+
+                <ul class="dropdown">
+                  <li><a href="#">Dropdown Level 3a</a></li>
+                  <li><a href="#">Dropdown Level 3b</a></li>
+                  <li><a href="#">Dropdown Level 3c</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Dropdown Level 2d</a></li>
+              <li><a href="#">Dropdown Level 2e</a></li>
+              <li><a href="#">Dropdown Level 2f</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Dropdown Level 1b</a></li>
+          <li><a href="#">Dropdown Level 1c</a></li>
+          <li class="divider"></li>
+          <li><label>Dropdown Level 1 Label</label></li>
+          <li><a href="#">Dropdown Level 1d</a></li>
+          <li><a href="#">Dropdown Level 1e</a></li>
+          <li><a href="#">Dropdown Level 1f</a></li>
+          <li class="divider"></li>
+          <li><a href="#">See all &rarr;</a></li>
+        </ul>
+      </li>
+      <li class="divider"></li>
+      <li class="has-form">
+        <form>
+          <div class="row collapse">
+            <div class="small-8 columns">
+              <input type="text">
+            </div>
+            <div class="small-4 columns">
+              <a href="#" class="alert button">Search</a>
+            </div>
+          </div>
+        </form>
+      </li>
+      <li class="divider show-for-small"></li>
+      <li class="has-form">
+        <a class="button" href="#">Button!</a>
+      </li>
+    </ul>
+  </section>
+</nav>
+
+<a href="#" data-dropdown="drop1" class="button dropdown">Dropdown Button</a><br>
+
+<ul id="drop1" class="f-dropdown">
+  <li><a href="#">This is a link</a></li>
+  <li><a href="#">This is another</a></li>
+  <li><a href="#">Yet another</a></li>
+</ul>
+
+
+<a href="#" data-dropdown="drop1" class="button dropdown">Dropdown Button <span data-dropdown="drop1"></span></a><br>
+
+<ul id="drop1" class="f-dropdown" data-dropdown-content>
+  <li><a href="#">This is a link</a></li>
+  <li><a href="#">This is another</a></li>
+  <li><a href="#">Yet another</a></li>
+</ul>
+
+<!-- Color Classes -->
+<a href="#" class="button dropdown secondary">Secondary Button</a>
+<a href="#" class="button dropdown success">Success Button</a>
+<a href="#" class="button dropdown alert">Alert Button</a>
+
+<!-- Radius Classes -->
+<a href="#" class="button dropdown radius">Radius Button</a>
+<a href="#" class="button dropdown round">Round Button</a>
+
+<div class="button-bar">
+  <ul class="button-group">
+    <li><a href="#" class="small button">Button 1</a></li>
+    <li><a href="#" class="small button">Button 2</a></li>
+    <li><a href="#" class="small button">Button 3</a></li>
+  </ul>
+  <ul class="button-group">
+    <li><a href="#" class="small button">Button 1</a></li>
+    <li><a href="#" class="small button">Button 2</a></li>
+    <li><a href="#" class="small button">Button 3</a></li>
+  </ul>
+</div>
+
+<!-- A default button-group with small buttons inside -->
+<ul class="button-group">
+  <li><a href="#" class="small button">Button 1</a></li>
+  <li><a href="#" class="small button">Button 2</a></li>
+  <li><a href="#" class="small button">Button 3</a></li>
+</ul>
+
+<!-- A round, even-3 button-group with default alert buttons inside. -->
+<!-- Do not put the radius classes on the buttons themselves. -->
+<ul class="button-group round even-3">
+  <li><a href="#" class="button alert">Button 1</a></li>
+  <li><a href="#" class="button alert">Button 2</a></li>
+  <li><a href="#" class="button alert">Button 3</a></li>
+</ul>
+
+
+<!-- Size Classes -->
+<a href="#" class="button">Default Button</a>
+<a href="#" class="tiny button">Tiny Button</a>
+<a href="#" class="small button">Small Button</a>
+<a href="#" class="large button">Large Button</a>
+
+<!-- Color Classes -->
+<a href="#" class="button secondary">Secondary Button</a>
+<a href="#" class="button success">Success Button</a>
+<a href="#" class="button alert">Alert Button</a>
+
+<!-- Radius Classes -->
+<a href="#" class="button radius">Radius Button</a>
+<a href="#" class="button round">Round Button</a>
+
+<!-- Disabled Class -->
+<a href="#" class="button disabled">Disabled Button</a>
+
+
+<ul class="breadcrumbs">
+  <li><a href="#">Home</a></li>
+  <li><a href="#">Features</a></li>
+  <li class="unavailable"><a href="#">Gene Splicing</a></li>
+  <li class="current"><a href="#">Cloning</a></li>
+</ul>
+
+<!-- You can also use this markup -->
+<nav class="breadcrumbs">
+  <a href="#">Home</a>
+  <a href="#">Features</a>
+  <a class="unavailable" href="#">Gene Splicing</a>
+  <a class="current" href="#">Cloning</a>
+</nav>
+
+
+
+
+<ul class="pagination">
+  <li class="arrow unavailable"><a href="">&laquo;</a></li>
+  <li class="current"><a href="">1</a></li>
+  <li><a href="">2</a></li>
+  <li><a href="">3</a></li>
+  <li><a href="">4</a></li>
+  <li class="unavailable"><a href="">&hellip;</a></li>
+  <li><a href="">12</a></li>
+  <li><a href="">13</a></li>
+  <li class="arrow"><a href="">&raquo;</a></li>
+</ul>
+
+
+
+
+
+<!-- Using only the small-block-grid -->
+<ul class="small-block-grid-2" >
+  <li><img src="/images/tst.PNG" width="50" height="50"></li>
+  <li><img src="/images/tst.PNG" width="50" height="50"></li>
+  <li><img src="/images/tst.PNG" width="50" height="50"></li>
+  <li><img src="/images/tst.PNG" width="50" height="50"></li>
+</ul>
+
+<!-- Using only the large-block-grid -->
+<ul class="large-block-grid-4">
+  <li><img src="/images/tst.PNG" width="50" height="50"></li>
+  <li><img src="/images/tst.PNG" width="50" height="50"></li>
+  <li><img src="/images/tst.PNG" width="50" height="50"></li>
+  <li><img src="/images/tst.PNG" width="50" height="50"></li>
+</ul>
+
+<!-- Using both block grids together for different layouts -->
+<ul class="small-block-grid-2 large-block-grid-4">
+  <li><img src="/images/tst.PNG" width="50" height="50"></li>
+  <li><img src="/images/tst.PNG" width="50" height="50"></li>
+  <li><img src="/images/tst.PNG" width="50" height="50"></li>
+  <li><img src="/images/tst.PNG" width="50" height="50"></li>
+</ul>
+
+
+
+<ul class="side-nav">
+  <li class="active"><a href="#">Link 1</a></li>
+  <li><a href="#">Link 2</a></li>
+  <li class="divider"></li>
+  <li><a href="#">Link 3</a></li>
+  <li><a href="#">Link 4</a></li>
+</ul>
+
+
+  
+  
+    <%= yield %>
+
+    
+    <%= javascript_include_tag "application" %>
+	
+</br>
+
+
+
+<form>
+  <fieldset>
+    <legend>Fieldset</legend>
+
+    <div class="row">
+      <div class="large-12 columns">
+        <label>Input Label</label>
+        <input type="text" placeholder="large-12.columns">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-4 columns">
+        <label>Input Label</label>
+        <input type="text" placeholder="large-4.columns">
+      </div>
+      <div class="large-4 columns">
+        <label>Input Label</label>
+        <input type="text" placeholder="large-4.columns">
+      </div>
+      <div class="large-4 columns">
+        <div class="row collapse">
+          <label>Input Label</label>
+          <div class="small-9 columns">
+            <input type="text" placeholder="small-9.columns">
+          </div>
+          <div class="small-3 columns">
+            <span class="postfix">.com</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-12 columns">
+        <label>Textarea Label</label>
+        <textarea placeholder="small-12.columns"></textarea>
+      </div>
+    </div>
+	
+	
+
+  </fieldset>
+</form>
+
+<form>
+  <div class="row">
+    <div class="small-8">
+      <div class="row">
+        <div class="small-3 columns">
+          <label for="right-label" class="right inline">Label</label>
+        </div>
+        <div class="small-9 columns">
+          <input type="text" id="right-label" placeholder="Inline Text Input">
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+
+</br>	
+
+
+
+<form>
+  <div class="row collapse">
+    <div class="small-3 large-2 columns">
+      <span class="prefix">http://</span>
+    </div>
+    <div class="small-9 large-10 columns">
+      <input type="text" placeholder="Enter your URL...">
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-6 columns">
+      <div class="row collapse">
+        <div class="small-10 columns">
+          <input type="text" placeholder="Hex Value">
+        </div>
+        <div class="small-2 columns">
+          <a href="#" class="button prefix">Action</a>
+        </div>
+      </div>
+    </div>
+    <div class="large-6 columns">
+      <div class="row collapse">
+        <div class="small-9 columns">
+          <input type="text" placeholder="Value">
+        </div>
+        <div class="small-3 columns">
+          <span class="postfix radius">Label</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+
+
+</br>
+
+
+<form class="custom">
+  <div class="row">
+    
+	<div class="large-6 columns">
+		<div class="row collapse">
+		<div class="large-9 small-9 columns">
+		<span class="prefix">mysubdomain</span>
+		</div>
+		<div class="large-3 small-3 columns">
+		
+		<div class="custom dropdown" data-id="1371472774159-S9ZOb">
+		<a class="current" href="#">.co</a>
+		<a class="selector" href="#"></a>
+		<ul>
+		<li class="">.com</li>
+		<li class="selected">.co</li>
+		<li class="">.ca</li>
+		</ul>
+		</div>
+		</div>
+		</div>
+	</div>
+    <div class="large-6 columns">
+      <div class="row collapse">
+        <div class="large-10 small-10 columns">
+        <select>
+          <option>google</option>
+          <option>yahoo</option>
+          <option>bing</option>
+        </select>
+        </div>
+        <div class="large-2 small-2 columns">
+          <span class="postfix">.com</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row collapse">
+    <div class="small-8 columns">
+      <select>
+        <option>google</option>
+        <option>yahoo</option>
+        <option>bing</option>
+      </select>
+    </div>
+    <div class="small-4 columns">
+      <a href="#" class="button postfix">Button</a>
+    </div>
+  </div>
+</form>
+
+<blockquote>I do not fear computers. I fear the lack of them. Maecenas faucibus mollis interdum. Aenean lacinia bibendum nulla sed consectetur.<cite>Isaac Asimov</cite></blockquote>
+
+
+
+<dl class="sub-nav">
+  <dt>Filter:</dt>
+  <dd class="active"><a href="#">All</a></dd>
+  <dd><a href="#">Active</a></dd>
+  <dd><a href="#">Pending</a></dd>
+  <dd><a href="#">Suspended</a></dd>
+</dl>
+
+<ul class="vcard">
+  <li class="fn">Gaius Baltar</li>
+  <li class="street-address">123 Colonial Ave.</li>
+  <li class="locality">Caprica City</li>
+  <li><span class="state">Caprica</span>, <span class="zip">12345</span></li>
+  <li class="email"><a href="#">g.baltar@cmail.com</a></li>
+</ul>
+
+
+
+<div data-alert class="alert-box">
+  <!-- Your content goes here -->
+  <a href="#" class="close">&times;</a>
+</div>
+
+
+<div data-alert class="alert-box">
+  <!-- Your content goes here -->
+  <a href="#" class="close">&times;</a>
+</div>
+
+
+<div class="row">
+	<div class="large-6 columns">
+		<div class="panel">
+			<h4>This is a regular panel.</h4>
+				<p>It has an easy to override visual style, and is appropriately subdued.</p>
+		</div>
+	</div>
+	<div class="large-6 columns">
+		<div class="panel">
+			<h4>This is a regular panel.</h4>
+				<p>It has an easy to override visual style, and is appropriately subdued.</p>
+		</div>
+	</div>
+</div>
+  <!-- Content here -->
+  
+
+
+</div>
+
+
+<div class="row">
+	<div class="large-6 columns">
+
+		<ul class="pricing-table">
+		  <li class="title">Standard</li>
+		  <li class="price">$99.99</li>
+		  <li class="description">An awesome description</li>
+		  <li class="bullet-item">1 Database</li>
+		  <li class="bullet-item">5GB Storage</li>
+		  <li class="bullet-item">20 Users</li>
+		  <li class="cta-button"><a class="button" href="#">Buy Now</a></li>
+		</ul>
+	</div>
+	<div class="large-6 columns">
+
+		<ul class="pricing-table">
+		  <li class="title">Standard</li>
+		  <li class="price">$99.99</li>
+		  <li class="description">An awesome description</li>
+		  <li class="bullet-item">1 Database</li>
+		  <li class="bullet-item">5GB Storage</li>
+		  <li class="bullet-item">20 Users</li>
+		  <li class="cta-button"><a class="button" href="#">Buy Now</a></li>
+		</ul>
+	</div>
+</div>
+
+
+
+
+
+<table>
+  <thead>
+    <tr>
+      <th width="200">Table Header</th>
+      <th>Table Header</th>
+      <th width="150">Table Header</th>
+      <th width="150">Table Header</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Content Goes Here</td>
+      <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+      <td>Content Goes Here</td>
+      <td>Content Goes Here</td>
+    </tr>
+    <tr>
+      <td>Content Goes Here</td>
+      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+      <td>Content Goes Here</td>
+      <td>Content Goes Here</td>
+    </tr>
+    <tr>
+      <td>Content Goes Here</td>
+      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+      <td>Content Goes Here</td>
+      <td>Content Goes Here</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+<ul class="inline-list">
+  <li><a href="#">Link 1</a></li>
+  <li><a href="#">Link 2</a></li>
+  <li><a href="#">Link 3</a></li>
+  <li><a href="#">Link 4</a></li>
+  <li><a href="#">Link 5</a></li>
+</ul>
+
+
+
+  </body>
+</html>
