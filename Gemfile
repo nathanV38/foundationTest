@@ -20,6 +20,8 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
   # Add Foundation Here
   gem 'zurb-foundation', '~> 4.0.0'
+  gem 'foundation-icons-sass-rails'
+  gem 'compass-rails'
 end
 
 gem 'jquery-rails'

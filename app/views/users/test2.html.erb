@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+
+	<!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width" />
+
+	<title>Welcome to Foundation Testing</title>
+
+	<!-- Included CSS Files -->
+	<%= stylesheet_link_tag    "application" %>
+	<%= javascript_include_tag "application" %>
+	
+
+</head>
+
+  <body id="page" class="off-canvas">
+	<div class="container">
+
+		<header id="header" class="row">
+		  <div class="four columns phone-two">
+		    <h1 id="site-title"><a href="http://zurb.com/playground/">ZURB</a></h1>
+		  </div>
+		  <div class="eight columns phone-two">
+		    <nav id="menu" role="navigation" class="hide-for-small">
+    			<ul id="nav" class="nav-bar">
+    				<li><a href="" class="main">One</a></li>
+    				<li><a href="" class="main">Two</a></li>
+    				<li><a href="" class="main">Three</a></li>
+    				<li><a href="" class="main">Four</a></li>
+    			</ul>
+    		</nav>
+  			<p class="show-for-small">
+  			  <a class='menu-button button' href="#bottomNav">Menu</a>
+  			  <a class='sidebar-button button' id='sidebarButton' href="#sidebar" >Extra</a>
+  			</p>
+		  </div>
+		</header>
+
+		
+		<i class="general foundicon-[icon]">test</i>
+		<i class="general-enclosed foundicon-[icon]"></i>
+		<i class="social foundicon-[icon]"></i>
+		<i class="accessibility foundicon-[icon]"></i>
+
+
+		<div class="row">
+  		<section role="main">
+  			<h3>Off-Canvas Bottom Nav</h3>
+  			<div class="row">
+  			  <div class="six columns">
+      			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget nulla massa. Sed ultricies posuere tincidunt. Morbi dolor est, aliquet quis egestas eu, consectetur nec neque. Etiam velit libero, congue eu accumsan sit amet, eleifend et sem. Donec ac felis sed sapien placerat venenatis. Fusce id tempus nunc. Vestibulum pellentesque vulputate tempus. Suspendisse sed consequat lectus. Nulla bibendum venenatis eros, elementum malesuada mi imperdiet eu. Fusce ornare gravida nulla, sed scelerisque sem scelerisque at.</p>
+
+      			<p>Mauris consectetur elementum massa nec convallis. Integer mauris purus, condimentum vitae mattis a, vehicula lacinia justo. Pellentesque scelerisque orci at ligula cursus eu tempor elit euismod. Donec eleifend, turpis in vulputate eleifend, orci lectus eleifend quam, et ultrices mi nisi id nulla. Nullam est magna, varius nec consectetur vel, pellentesque ac justo. Vivamus commodo pellentesque ante, sed semper nulla congue non. Nunc nec augue sed nibh dapibus accumsan. Nullam in mauris quis lacus ultricies convallis. Morbi semper suscipit elit ut suscipit. Donec lobortis tellus lorem.</p>
+      		</div>
+      		<div class="six columns">
+      			<p>Quisque lacinia est a libero tempor quis gravida nibh luctus. Nulla facilisi. Vestibulum bibendum ipsum a lacus molestie pulvinar a nec risus. Nulla facilisi. Aenean nec tellus ligula. Ut tortor mi, consequat in ornare in, condimentum sed leo. Phasellus et luctus ipsum. Mauris gravida molestie velit ac iaculis. Integer quis libero id erat consectetur accumsan ut eget diam. In hac habitasse platea dictumst.</p>
+
+      			<p>Quisque lacinia est a libero tempor quis gravida nibh luctus. Nulla facilisi. Vestibulum bibendum ipsum a lacus molestie pulvinar a nec risus. Nulla facilisi. Aenean nec tellus ligula. Ut tortor mi, consequat in ornare in, condimentum sed leo. Phasellus et luctus ipsum. Mauris gravida molestie velit ac iaculis. Integer quis libero id erat consectetur accumsan ut eget diam. In hac habitasse platea dictumst.</p>
+      		</div>
+        </div>
+  		</section>
+
+  		<section id="sidebar" role="complementary">
+				<h4>Supplemental</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget nulla massa. Sed ultricies posuere tincidunt. Morbi dolor est, aliquet quis egestas eu, consectetur nec neque. Etiam velit libero, congue eu accumsan sit amet, eleifend et sem. Donec ac felis sed sapien placerat venenatis. Fusce id tempus nunc. Vestibulum pellentesque vulputate tempus. Suspendisse sed consequat lectus. Nulla bibendum venenatis eros, elementum malesuada mi imperdiet eu. Fusce ornare gravida nulla, sed scelerisque sem scelerisque at.</p>
+  		</section>
+		</div>
+
+
+		<nav id="bottomMenu" role="navigation" class="show-for-small">
+			<ul id="bottomNav" class="nav-bar">
+				<li><a href="">One</a></li>
+				<li><a href="">Two</a></li>
+				<li><a href="">Three</a></li>
+				<li><a href="">Four</a></li>
+			</ul>
+		</nav>
+    <footer class="site-footer row" role="contentinfo">
+      <div class="twelve columns">
+        Created by ZURB for Foundation 3, based on code from Jason Weaver and Luke Wroblewski
+      </div>
+    </footer>
+  </div>
+
+
+<footer class="row">
+	<section class="five columns">
+	<h6>
+	<strong>Made by ZURB</strong>
+	</h6>
+	<p>
+	Foundation is made by
+	<a href="http://www.zurb.com/">ZURB</a>
+	, a product design company in Campbell, California. We've put more than 15 years of experience building web products, services and websites into this framework.
+	<a class="foundation-info" href="about.php">Foundation Info and Goodies ?</a>
+	</p>
+	</section>
+	
+	<section class="three columns">
+	<h6>
+	<strong>Using Foundation?</strong>
+	</h6>
+	<p>
+	Let us know how you're using Foundation and we might feature you as an example!
+	<br>
+	<a href="mailto:foundation@zurb.com?subject=I'm%20using%20Foundation">Get in touch ?</a>
+	</p>
+	</section>
+	
+	<section class="four columns">
+	<h6>
+	<strong>Need some help?</strong>
+	</h6>
+	<p class="support">
+	For answers or help visit the
+	<a href="docs/support.html">Support page</a>
+	.
+	</p>
+	<ul class="inline-list">
+	<li>
+	<a target="_blank" href="http://www.facebook.com/ZURB">
+	</li>
+	<li>
+	<a target="_blank" href="https://plusone.google.com/_/+1/confirm?url=http://foundation.zurb.com&title=Foundation%20from%20ZURB">
+	</li>
+	<li>
+	<a target="_blank" href="http://www.twitter.com/foundationzurb">
+	</li>
+	</ul>
+	</section>
+</footer>
+
+</body>

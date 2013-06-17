@@ -88,4 +88,12 @@ class UsersController < ApplicationController
     
     end
   end
+  
+   def test2
+    #raise "ok".to_yaml
+    respond_to do |format|
+      format.html{render "test2.html.erb", :layout => false }
+    
+    end
+  end
 end

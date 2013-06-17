@@ -2,6 +2,7 @@ TstFound::Application.routes.draw do
   resources :users
   
   match '/test' => 'users#test'
+  match '/test2' => 'users#test2'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
